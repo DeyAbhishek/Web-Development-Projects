@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	>
+
+<ui:composition template="WEB-INF/templetes/first.xhtml">
+	<ui:define name="menu">
+	</ui:define>
+	<ui:define name="search">
+	</ui:define>
+	<ui:define name="sidebar">
+		<img src="images/img01.jpg" style="width:280px;height:400px"/>
+	</ui:define>
+	
+	<ui:define name="content">
+		<h1>Registration</h1>
+				<h:panelGrid columns="3">
+					Name <h:inputText style="width:200px" value="#{registrationBean.registration.name}" id="name" required="true" requiredMessage="Name can not be blank"/> <h:message for="name"/>
+					Email <h:inputText style="width:200px" value="#{registrationBean.registration.emailid}" id="email" required="true" requiredMessage="Email can not be blank"/> <h:message for="email"/>
+					Password<h:inputSecret style="width:200px" id="password" required="true" value="#{registrationBean.registration.password}" requiredMessage="Password can not be blank"/> <h:message for="password"/>
+					Date of birth  <rich:calendar required="true" requiredMessage="Date of birth can not be blank" value="#{registrationBean.registration.dob}" /> <h:message for="dob"/>
+					Country <h:inputText value="#{registrationBean.registration.country}" style="width:200px" id="country" required="true" requiredMessage="Country can not be blank"/> <h:message for="country"/>
+					Phone <h:inputText style="width:200px" id="phone" value="#{registrationBean.registration.phone}" /><h:outputText></h:outputText>
+					Gender <h:selectOneRadio  style="width:200px" value="#{registrationBean.registration.gender}" id="gender" required="true" requiredMessage="Gender can not be blank"> <h:message for="gender"/>
+						<f:selectItem itemLabel="Male" itemValue="m" />
+						<f:selectItem itemLabel="Female" itemValue="f" />
+					</h:selectOneRadio>
+					<h:outputText></h:outputText>
+					Security question <h:selectOneMenu style="width:200px" value="#{registrationBean.registration.securityQuestion}" id="q" required="true" requiredMessage="Security question can not be blank"> <h:message for="q"/>
+						<f:selectItem itemLabel="What is the name of your first school?" itemValue="i1"/>
+						<f:selectItem itemLabel="What is your favorite color?" itemValue="i2"/>
+						<f:selectItem itemLabel="What is the name of your first pet?" itemValue="i3"/>
+						<f:selectItem itemLabel="What is your nickname?" itemValue="i4"/>
+						<f:selectItem itemLabel="What is your favorite fruit?" itemValue="i5"/>
+						<f:selectItem itemLabel="What is the number of your first car?" itemValue="i6"/>
+						<f:selectItem itemLabel="What is your mother's maiden name?" itemValue="i7"/>
+					</h:selectOneMenu><h:outputText></h:outputText>
+					Your answer <h:inputText style="width:200px" id="ans" value="#{registrationBean.registration.answer}" required="true" requiredMessage="Security answer can not be blank"/> <h:message for="ans"/>
+					<h:outputText value=""/>
+					<h:commandButton value="Submit" actionListener="#{registrationBean.registerUser}"/>
+					<h:outputText value="#{registrationBean.message}"/>
+				</h:panelGrid>
+	
+	
+</ui:define>
+</ui:composition>
+</html>
