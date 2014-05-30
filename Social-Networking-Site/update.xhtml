@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templetes/first.xhtml">
+	<ui:define name="sidebar">
+	<h:outputText value="" id="photo"></h:outputText>
+	<h:outputText id="status" value=""></h:outputText>
+	<img src="images/img01.jpg" style="width: 240px;height: 280px"/><br></br><br/>
+	<h2>Friends :</h2>
+		<h:panelGrid columns="3">
+		
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		</h:panelGrid>
+	
+	</ui:define>
+	
+	<ui:define name="content">
+	     
+	    <br></br>
+	    <h:panelGrid columns="2">
+	    <font size="2" color="black">School:</font><h:inputText id="school" value="#{profileBean.profile.school}"></h:inputText>
+	    <font size="2" color="black">College:</font><h:inputText id="college" value="#{profileBean.profile.college}"></h:inputText>
+	    <font size="2" color="black">Workplace:</font><h:inputText id="wrkplc" value="#{profileBean.profile.workplace}"></h:inputText>
+	    <hr></hr>
+	     <font size="2" color="black">Country:</font><h:inputText id="cntry" value="#{profileBean.registration.country}"></h:inputText>
+	     <font size="2" color="black">Phone:</font><h:inputText id="phn" value="#{profileBean.registration.phone}"></h:inputText>
+	   
+	     <hr></hr>
+	     <font size="2" color="black">About me:</font><h:inputText id="bio" value="#{profileBean.profile.bio}"></h:inputText>
+	    <h:commandButton value="Save" actionListener="#{profileBean.saveDetails}" id="save"></h:commandButton>
+	    </h:panelGrid>
+	
+	</ui:define>
+	
+</ui:composition>
+</html>
