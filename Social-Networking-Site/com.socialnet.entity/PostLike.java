@@ -2,7 +2,7 @@ package com.socialnet.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
-
+https://github.com/DeyAbhishek/Web-Based-Projects/tree/master/Social-Networking-Site/com.socialnet.entity
 
 /**
  * The persistent class for the post_like database table.
