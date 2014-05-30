@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Steak House</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/cutlery.ico">
+
+	<link rel="stylesheet" type="text/css" href="styles/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/lib/bootstrap-theme.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	
+	<link href="styles/style.css" rel="stylesheet" type="text/css"  />
+	
+	<script type="text/javascript" src="scripts/lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/jquery.slidertron-1.0.js"></script>
+	<script src="scripts/lib/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+	<script type="text/javascript" src="scripts/lib/carouse.js"></script>
+
+</head>
+<body>
+
+	
+		<header>
+		
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-cutlery"></span>    Steak House </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="ownerHome.html">Admin</a></li>
+        <li><a href="#">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
+
+
+</nav>
+
+	</header>
+			<section>
+			<div class="container" id="home">
+						<div id="slider">
+							<div class="viewer">
+								<div class="reel">
+									<div class="slide"> <img src="images/1.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/3.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/4.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/5.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/6.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/2.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/8.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/9.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/10.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/11.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/12.jpg" alt="" /> </div>
+									<div class="slide"> <img src="images/13.jpg" alt="" /> </div>
+							</div>
+						</div>
+						</div>
+						<script type="text/javascript">
+				$('#slider').slidertron({
+					viewerSelector: '.viewer',
+					reelSelector: '.viewer .reel',
+					slidesSelector: '.viewer .reel .slide',
+					advanceDelay: 2000,
+					speed: 'slow'
+				});
+			</script>
+
+
+
+
+			
+			<ul class="nav nav-tabs nav-justified">
+			<li class="active">
+			<a href="#tab-guest" data-toggle="tab">Guest</a>
+			</li>
+			<li>
+			<a href="#tab-owner" data-toggle="tab">Owner</a>
+			</li>
+			<li>
+			<a href="#tab-menu" data-toggle="tab" >Today's Menu</a>
+			</li>
+			</ul>
+			<div id="content" class="tab-content">
+				<div class="tab-pane active" id="tab-guest">
+					<h6>Make A reservation</h6>
+					<form role="form">
+  						<div class="row">
+  						<div class="col-xs-6">
+  						<div class="form-group">
+  											
+   						 <label for="date">Date</label>
+ 						   <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy">
+ 						 </div>
+ 						 </div>
+ 						 <div class="col-xs-6">
+ 						 <div class="form-group">
+   						 <label for="date">Time</label>
+ 						   <input type="time" class="form-control" id="time" placeholder="hh:mm">
+ 						 </div>
+ 						 </div>
+ 						 </div>
+ 						 <div class="form-group">
+   						 <label for="name">Name</label>
+ 						   <input type="text" class="form-control" id="name" placeholder="Enter your name">
+ 						 </div>
+ 						 <div class="form-group">
+   						 <label for="tel">Phone</label>
+ 						   <input type="phone" class="form-control" id="phone" placeholder="Enter your contact number">
+ 						 </div>
+ 						 <div class="form-group">
+   						 <label for="email">Email</label>
+ 						   <input type="email" class="form-control" id="email" placeholder="Enter your email id">
+ 						 </div>
+
+ 						 <div class="row">
+  						<div class="col-xs-4">
+ 						 <div class="form-group">
+   						 <label for="people"># People</label>
+ 						   <input type="number" class="form-control" id="people" placeholder="">
+ 						 </div>
+ 						 </div>
+ 						 <div class="col-xs-8">
+ 						 <div class="form-group">
+   						 <label for="special">Special</label>
+ 						   <input type="text" class="form-control" id="special" placeholder="eg. Birthday Party, Anniversary etc">
+ 						 </div>
+ 						 </div>
+ 						 </div>
+ 						 
+					     
+ 					<div class="text-center">
+ 					 <button type="submit" class="btn btn-primary">Submit</button>
+ 					 </div>
+					</form>
+
+					</div>
+
+					<div class="tab-pane" id="tab-owner">
+					<form role="form">
+  						<div class="form-group">
+  						<h6>Login</h6>
+   						 <label for="email">Email address</label>
+ 						   <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+ 						 </div>
+					     <div class="form-group">
+   						 <label for="pswd">Password</label>
+   						 <input type="password" class="form-control" id="pswd" placeholder="Password">
+  						 </div>
+
+ 					<div class="text-center">
+ 					 <button type="submit" class="btn btn-primary">Submit</button>
+ 					 <button type="button" class="btn btn-link">Forgot password?</button>
+ 					 </div>
+					</form>
+						</div>
+
+						<div class="tab-pane" id="tab-menu">
+								<h6>Today's Special</h6>
+										<div id="carousel">
+													<img src="images/21.jpg" width="600" height="400" />
+													<img src="images/22.jpg" width="600" height="400" />
+													<img src="images/23.jpg" width="600" height="400" />
+													<img src="images/24.jpg" width="600" height="400" />
+													<img src="images/25.jpg" width="600" height="400" />
+										</div>
+								
+						</div>
+					</div>
+
+				</div>
+		
+
+</section>
+<footer>
+<div class="footer-note">
+	 Copyright © 2014 <a href="#">Steak House</a> | <a href="#">Website Designed</a> by<a href="http://www.facebook.com/adey0990" target="_blank"> Abhishek Dey </a> .
+
+</div>
+</footer>
+	<script type="text/javascript" src="scripts/lib/bootstrap.min.js"></script>
+
+</body></html>
