@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="WEB-INF/templetes/first.xhtml">
+<ui:define name="sidebar">
+<h:outputText id="name" value="${sessionScope['fullname']}"></h:outputText>
+	<img src="profilePics/${sessionScope['friendId']}.jpg"/>
+	
+	<img src="images/img01.jpg" style="width: 240px;height: 280px"/><br></br><br/>
+	<h2>Friends :</h2>
+		<h:panelGrid columns="3">
+		
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		<img src="images/img01.jpg" style="width: 80px;height: 80px"/>
+		</h:panelGrid>
+	</ui:define>
+	
+
+	<ui:define name="content">
+	    <br></br>
+	    
+	     <div style="font-weight: bold;color:black">Write Message</div>
+			  <h:inputTextarea id="msg_box" value="#{scrapBean.scrap.scrap}" cols="70" rows="5"/><br/>
+			  <h:commandButton id="btn_post" value="POST" action="#{scrapBean.postMsg()}"/>			
+			  
+			  <div style="font-weight: bold;color:green;margin-top:20px"><h:outputText value="#{friendsBean.message}"/></div>
+			  
+			  <br></br>
+	    <h:panelGrid columns="2">
+	    <font size="2" color="black">School:</font><h:outputText id="school" value="#{profileBean.profile.school}"></h:outputText>
+	    <font size="2" color="black">College:</font><h:outputText id="college" value="#{profileBean.profile.college}"></h:outputText>
+	    <font size="2" color="black">Workplace:</font><h:outputText id="wrkplc" value="#{profileBean.profile.workplace}"></h:outputText>
+	    <hr></hr>
+	     <font size="2" color="black">Sex:</font><h:outputText id="sx" value="#{profileBean.registration.gender}"></h:outputText>
+	     <font size="2" color="black">Date of birth:</font><h:outputText id="dob" value="#{profileBean.registration.dob}"></h:outputText>
+	     <font size="2" color="black">Country:</font><h:outputText id="cntry" value="#{profileBean.registration.country}"></h:outputText>
+	     <font size="2" color="black">Phone:</font><h:outputText id="phn" value="#{profileBean.registration.phone}"></h:outputText>
+	     <font size="2" color="black">Email id:</font><h:outputText id="email" value="#{profileBean.profile.emailid}"></h:outputText>
+	     <hr></hr>
+	     <font size="2" color="black">About me:</font><h:outputText id="bio" value="#{profileBean.profile.bio}"></h:outputText>
+	     <br></br>
+	    <h:commandButton immediate="true" rendered="#{!(friendsBean.isFriendRequestSend(profileBean.registration.emailid) || friendsBean.isAlreadyFriend(profileBean.registration.emailid))}" value="Add Friend" action="#{friendsBean.sendFriendRequest(profileBean.registration.emailid,profileBean.registration.name,)}" />
+	  </h:panelGrid>
+	</ui:define>
+
+</ui:composition>
+
+</html>
