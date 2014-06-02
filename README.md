@@ -4,7 +4,7 @@ Web-Based-Projects
 
 Payroll System : Developed using Java and JSP
 
-E-Commerce System : Developed using C#
+E-Commerce System : Developed using ASP.NET and C#
 
 Social Networking Site : Developed using Java, JSF and JPA
 
