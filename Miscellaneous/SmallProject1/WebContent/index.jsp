@@ -80,7 +80,7 @@
 <!-- <br><br><hr>-->
 </div></section> 
 <div class="footer-note">
-	 Copyright © 2015 <a href="#">SJRWMD</a> 
+	 Copyright © 2015 <a href="#"></a> 
 
 </div>
 </footer>
