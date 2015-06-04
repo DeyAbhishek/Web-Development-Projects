@@ -1,0 +1,82 @@
+html{
+	background: #F5F5F5;
+}
+body{
+	font-family: 'PT Sans', sans-serif;
+	background : none;
+}
+section{
+	margin : 30px 0;
+
+}
+iframe{
+	 width: 400px;
+	 height: 400px;
+	 border: 0;
+}
+
+
+
+
+#home{
+	max-width: 1200px;
+	padding : 50px;
+	box-shadow: 0 0 10px rgba(15, 19, 32, 0.99);
+}
+
+.under-construction {
+	height : 200px;
+}
+
+.tab-content{
+	background : #FFF;
+	padding : 20px;
+	border-radius: 2px;
+	box-shadow: 0 0 10px #FFF;
+}
+
+.tab-pane h6 {
+	font-size : 1.1em;
+	font-weight: 700;
+	color: #32434D;
+	text-transform: uppercase;
+}
+
+.nav-tabs{
+	border-radius: 4px 4px 0 0;
+	box-shadow: 0 0 10px #FFF;
+}
+
+.navbar-inverse .navbar-brand{
+	color:#fff;
+}
+ul.nav-tabs.nav-justified>li{
+	display: table-cell;
+	width: 1%;
+}
+
+.footer-note{
+	color:rgba(15, 19, 32, 0.99);
+	text-align: center;
+	padding:10px;
+}
+
+.footer-note a{
+	color: black;
+}
+
+
+ @media (max-width: 1024px){
+#slider{
+	display : none;
+}
+#tab-menu{
+	display:none;
+}
+ #tab-reservation span.btn-text {
+        display: none;
+    }
+     ul.nav-tabs a span.tab-text {
+        display: none;
+    }
+}
