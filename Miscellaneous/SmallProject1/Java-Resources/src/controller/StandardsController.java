@@ -43,7 +43,7 @@ public class StandardsController extends HttpServlet {
 	            String chemicalID = request.getParameter("chemical_id");
 	            dao.deleteStandards(chemicalID);
 	            forward = STANDARDS_LIST;
-	            request.setAttribute("users", dao.getAllStandards());    
+	            request.setAttribute("standards", dao.getAllStandards());    
 	        } else if (action.equalsIgnoreCase("update")){
 	            forward = INSERT_OR_EDIT;
 	            String chemicalID = request.getParameter("chemical_id");
