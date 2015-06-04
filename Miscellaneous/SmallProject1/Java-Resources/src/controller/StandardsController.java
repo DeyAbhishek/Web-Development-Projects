@@ -53,7 +53,7 @@ public class StandardsController extends HttpServlet {
 	            forward = STANDARDS_LIST;
 	            request.setAttribute("standards", dao.getAllStandards());
 	        } else {
-	            forward = INSERT_OR_EDIT;
+	            forward = INSERT_OR_EDIT;   //for insert
 	        }
 
 	        RequestDispatcher view = request.getRequestDispatcher(forward);
