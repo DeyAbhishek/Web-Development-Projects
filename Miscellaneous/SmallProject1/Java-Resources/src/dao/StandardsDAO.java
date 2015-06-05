@@ -59,8 +59,7 @@ public class StandardsDAO {
             preparedStatement.setString(2, standards.getLocation());
             preparedStatement.setString(3, standards.getChemical_id());
             preparedStatement.executeUpdate();
-            
-
+         
         } catch (SQLException e) {
             e.printStackTrace();
         }	
@@ -71,7 +70,7 @@ public class StandardsDAO {
 		List<Standards> standardsList = new ArrayList<Standards>();
 		try{
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("select * from wqcs_standards"); //where rownum <= 30");
+			ResultSet rs = statement.executeQuery("select * from wqcs_standards where rownum <= 30");
 			while (rs.next()){
 				Standards standards = new Standards();
 				standards.setChemical_id(rs.getString("chemical_id"));
@@ -109,6 +108,7 @@ public class StandardsDAO {
 		boolean flag = false;
 		try{
 			PreparedStatement ps = connection.prepareStatement("select count(*) from wqcs_standards where chemical_id = ?");
+			ps.setString(1, chemicalID);
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()){
